@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+   background-image: url('https://wallpaperaccess.com/full/655207.jpg'); 
+            background-size: cover;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .toggle-form {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .toggle-form a {
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="loginForm">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" id="loginUsername">
+            <input type="password" placeholder="Password" id="loginPassword">
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <div class="toggle-form">
+            <p>Don't have an account? <a onclick="toggleForm('registerForm')">Register</a></p>
+        </div>
+    </div>
+
+    <div class="container" id="registerForm" style="display:none;">
+        <h2>Register</h2>
+        <form>
+            <input type="text" placeholder="e-mail" id="registere-mail">
+            
+            <input type="text" placeholder="mobile number" id="registermobile number">
+          
+            <input type="text" placeholder="Username" id="registerUsername">
+            <input type="password" placeholder="Password" id="registerPassword">
+            <button type="button" onclick="register()">Register</button>
+        </form>
+        <div class="toggle-form">
+            <p>Already have an account? <a onclick="toggleForm('loginForm')">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            document.getElementById('loginForm').style.display = (formId === 'loginForm') ? 'block' : 'none';
+            document.getElementById('registerForm').style.display = (formId === 'registerForm') ? 'block' : 'none';
+        }
+
+        function login() {
+            var username = document.getElementById('loginUsername').value;
+            var password = document.getElementById('loginPassword').value;
+
+            // Add your login logic here
+            console.log('Login:', username, password);
+        }
+
+        function register() {
+            var username = document.getElementById('registerUsername').value;
+            var password = document.getElementById('registerPassword').value;
+
+            // Add your registration logic here
+            console.log('Register:', username, password);
+        }
+    </script>
+</body>
+</html>

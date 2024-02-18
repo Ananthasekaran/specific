@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentorship Program</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Mentorship Program</h2>
+      <div id="mentorshipProgram">
+        <div class="search-section">
+          <h3>Find a Mentor</h3>
+          <label for="expertise">Expertise:</label>
+          <input type="text" id="expertise" />
+          <label for="availability">Availability:</label>
+          <input type="text" id="availability" />
+          <button onclick="searchMentors()">Search</button>
+        </div>
+        <div id="mentorList">
+          <!-- Mentor search results will be dynamically added using JavaScript -->
+        </div>
+        <div id="messageBox" style="display: none">
+          <h3>Message Mentor</h3>
+          <textarea
+            id="messageText"
+            rows="4"
+            placeholder="Enter your message"
+          ></textarea>
+          <button onclick="sendMessage()">Send Message</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="n.js"></script>
+  </body>
+</html>

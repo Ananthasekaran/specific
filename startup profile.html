@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startup Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Startup Profile</h2>
+      <div id="startupProfile">
+        <div class="section">
+          <h3>Description</h3>
+          <p id="description">Description of the startup</p>
+        </div>
+        <div class="section">
+          <h3>Mission Statement</h3>
+          <p id="missionStatement">Mission statement of the startup</p>
+        </div>
+        <div class="section">
+          <h3>Offerings</h3>
+          <p id="offerings">Offerings of the startup</p>
+        </div>
+        <div class="section">
+          <h3>Team Members</h3>
+          <ul id="teamMembers">
+            <!-- Team members will be dynamically added using JavaScript -->
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Investors & Partners</h3>
+          <ul id="investorsPartners">
+            <!-- Investors and partners will be dynamically added using JavaScript -->
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Pitch Decks</h3>
+          <input type="file" id="pitchDeck" accept=".pdf,.ppt,.pptx" />
+          <button onclick="uploadPitchDeck()">Upload</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="p.js"></script>
+  </body>
+</html>
